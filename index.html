@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    </head>
+<body>
+    <div class= "channelsDiv">
+        <H3 id="channelsTitle">CANALES <br>DISPONIBLES</H3>
+        <input type="button" id="addNewChannelButton" value="+" onclick="showDiv()" />
+        <!-- Starts JS function for showing the text input box -->
+        
+        <div id="channelsDiv">
+
+            <div>
+                <!-- shows the list of actual channels from JS 'list' variable -->
+                <ol id="channelsList">
+                    <input type="button" id="generalButton" value="General" onclick="setGeneralChannel()"/>
+                </ol>
+                
+            </div>
+            <!-- Shows or hides a div depending on the JS function linked by Id-->
+            <div id="NewChannelDiv"  style="display:none;"> Nombre del nuevo canal
+                <!-- Text box for the name of the channel -->
+                <input type="text" id="NewChannelBox">
+                <!-- Button for calling saveNewChannel() -->
+                <input type="button" value="Guardar" onclick="saveNewChannel()" />
+                
+            </div>
+           
+        </div>
+    </div>
+
+    <div id="mainChat">
+        <div id="channelHeader">
+            <H3 id="channelTitle">Canal Actual</H3>
+            <p id="channelName"></div>
+        </div>
+        <div id="searchBar">
+            <input type="text" id="findField">
+            <input type="button" value="BUSCAR" onclick="find()" />
+
+        </div>
+        <div id="messagesStack">
+        </div>
+    </div>
+
+
+    <div class= "messageDiv">
+        <div style="color:gold">NUEVO MENSAJE: <br>
+            <input type="text" id="NewMessageText">
+            <input type="button" value=">" onclick="newMessage()" />
+        </div>
+    </div>
+
+
+
+
+
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
